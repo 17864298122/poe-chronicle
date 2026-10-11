@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #d0d0d0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* PoE 风格滚动条 */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7b377;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e8d7a8;
+}
+
+/* PoE 风格卡片 */
+.poe-card {
+  @apply bg-poe-secondary border border-poe-gold/30 rounded-sm;
+  box-shadow: inset 0 0 10px rgba(199, 179, 119, 0.1);
+}
+
+.poe-card:hover {
+  @apply border-poe-gold/60;
+  box-shadow: inset 0 0 15px rgba(199, 179, 119, 0.2);
+}
+
+/* PoE 风格按钮 */
+.poe-btn {
+  @apply px-4 py-2 bg-gradient-to-b from-poe-gold/30 to-poe-dark-gold/50 border border-poe-gold text-poe-gold rounded-sm font-bold transition-all;
+}
+
+.poe-btn:hover {
+  @apply from-poe-gold/50 to-poe-dark-gold/70 shadow-lg;
+}
+
+.poe-btn:active {
+  @apply from-poe-dark-gold/70 to-poe-dark-gold/90;
+}
+
+/* PoE 风格标题 */
+.poe-title {
+  @apply text-3xl font-bold text-poe-gold font-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.poe-subtitle {
+  @apply text-xl text-poe-gold/80 font-serif;
+}
+
+/* PoE 风格分割线 */
+.poe-divider {
+  @apply border-t border-poe-gold/30 my-4;
+}
